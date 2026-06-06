@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: transcriptai
+    env: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -w 1 -b 0.0.0.0:5000 app:app
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
+    disk:
+      name: uploads
+      mountPath: /app/uploads
+      sizeGB: 10
