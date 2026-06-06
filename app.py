@@ -36,7 +36,7 @@ state_lock = threading.Lock()
 # Load Whisper model (cached after first load)
 print("🚀 Loading Faster-Whisper model (base)...")
 try:
-    whisper_model = WhisperModel("base", device="cpu", compute_type="int8")
+    whisper_model = WhisperModel("tiny", device="cpu", compute_type="int8")
     print("✅ Model loaded successfully")
 except Exception as e:
     print(f"❌ Error loading model: {e}")
