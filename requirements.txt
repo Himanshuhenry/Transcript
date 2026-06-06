@@ -1,6 +1,7 @@
-Flask==2.3.2
+Flask==3.0.3
 Flask-CORS==4.0.0
 faster-whisper==1.2.1
 numpy
 python-dotenv
 Werkzeug
+gunicorn
